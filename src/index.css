@@ -1,0 +1,72 @@
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f4f9;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.player-input {
+  margin: 10px;
+}
+
+input {
+  padding: 8px;
+  margin: 5px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.round-display, .score-display, .winner-display {
+  margin: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #555;
+}
+
+.choice-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.choice-button:hover {
+  background-color: #45a049;
+}
+
+.next-round-button {
+  background-color: #008cba;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.next-round-button:hover {
+  background-color: #007bb5;
+}
+
+.winner-display {
+  color: #d9534f;
+}
+
+.score-display {
+  color: #5bc0de;
+}

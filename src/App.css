@@ -1,0 +1,139 @@
+/* Container styling with a background gradient */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4CAF50, #1E90FF);
+  min-height: 100vh;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 30px;
+  animation: fadeIn 1.5s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Input fields with modern focus and glow effects */
+input {
+  padding: 12px;
+  margin: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  font-size: 18px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: none;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+input:focus {
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8), 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
+/* Button hover effects with 3D transformations */
+.choice-button {
+  background: linear-gradient(45deg, #ff6347, #ff4500);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  margin: 10px;
+  border-radius: 12px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transform: perspective(600px) rotateX(0);
+}
+
+.choice-button:hover {
+  transform: perspective(600px) rotateX(10deg);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.5);
+}
+
+/* Pulse animation to grab attention for next round */
+.next-round-button {
+  background: linear-gradient(45deg, #1E90FF, #00BFFF);
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 12px;
+  margin-top: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.next-round-button:hover {
+  transform: scale(1.1);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Score display with smooth transitions */
+.score-display {
+  color: #FFD700;
+  font-size: 2em;
+  margin-top: 20px;
+  animation: slideInFromRight 0.8s ease-in-out;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Winner display with animation for attention */
+.winner-display {
+  color: #FFD700;
+  font-size: 2.5em;
+  margin-top: 30px;
+  animation: zoomIn 1.2s ease-out;
+  font-weight: bold;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Overall fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
